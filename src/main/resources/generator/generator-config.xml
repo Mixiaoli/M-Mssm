@@ -41,5 +41,6 @@
                              type="XMLMAPPER"/>
 
         <table tableName="user"/><!--生成完后执行下一个的时候需要删掉-->
+        <table tableName="product"/>
     </context>
 </generatorConfiguration>
