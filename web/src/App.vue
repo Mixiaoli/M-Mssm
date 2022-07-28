@@ -1,30 +1,43 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <a-layout>
+    <the-sider></the-sider>
+      <a-layout>
+      <the-content></the-content>
+      </a-layout>
+  </a-layout>
 </template>
+<script lang="ts">
 
+import { defineComponent, ref } from 'vue';
+import TheContent from '@/components/the-content.vue';
+import TheSider from "@/components/the-sider.vue";
+export default defineComponent({
+  components: {
+    TheContent,
+    TheSider,
+  },
+});
+</script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+#components-layout-demo-custom-trigger .trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
 }
 
-#nav {
-  padding: 30px;
+#components-layout-demo-custom-trigger .trigger:hover {
+  color: #1890ff;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+#components-layout-demo-custom-trigger .logo {
+  height: 32px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 16px;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.site-layout .site-layout-background {
+  background: #fff;
 }
 </style>

@@ -1,5 +1,6 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>Mixiao</h1>
+    <h1>2324598590@qq.com</h1>
   </div>
 </template>
